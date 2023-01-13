@@ -24,11 +24,14 @@ public final class HelloWorld {
      *            the command line arguments; unused here
      */
     public static void main(String[] args) {
-        SimpleWriter out = new SimpleWriter1L();
+        SimpleWriter consoleOut = new SimpleWriter1L();
         SimpleReader keyboardIn = new SimpleReader1L();
+        consoleOut.print("please enter your name: ");
         String name = keyboardIn.nextLine();
-        out.println("Hello " + name);
-        out.close();
+        // print out the result
+        consoleOut.println("Hello " + name);
+        // close IO stream
+        consoleOut.close();
         keyboardIn.close();
     }
 
