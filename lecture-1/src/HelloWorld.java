@@ -40,7 +40,7 @@ public class HelloWorld {
     	String value = fileIn.nextLine();
     	consoleOut.println(value);
     	
-    	
+    	consoleOut.println("123");
     	
     	String s1 = "123132"; 
     	int i1 = 3;
