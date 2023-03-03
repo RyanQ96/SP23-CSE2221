@@ -1,7 +1,4 @@
 import java.util.Arrays;
-
-import components.random.Random;
-import components.random.Random1L;
 import components.simplereader.SimpleReader;
 import components.simplereader.SimpleReader1L;
 import components.simplewriter.SimpleWriter;
@@ -17,7 +14,6 @@ public final class Array {
 		int currentNum = num; 
 		String res = ""; 
 		while (currentNum > 1) {
-			
 //			out.print(currentNum + ", "); 
 			res += currentNum + ", ";
 			if (currentNum % 2 == 0) {
