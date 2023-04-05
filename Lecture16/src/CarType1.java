@@ -1,5 +1,5 @@
 
-public class CarType1 implements CarI {
+public class CarType1 implements Car {
 
 	
 	
@@ -24,12 +24,7 @@ public class CarType1 implements CarI {
 		// TODO Auto-generated method stub
 		System.out.println("Car Type 1 is driving");
 	}
-
-	@Override
-	public void printTest() {
-		// TODO Auto-generated method stub
-		
-	}	
+	
 	
 	
 	

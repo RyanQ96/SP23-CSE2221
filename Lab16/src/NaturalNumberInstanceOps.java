@@ -67,8 +67,7 @@ public final class NaturalNumberInstanceOps extends NaturalNumber2 {
 	public void subtract(NaturalNumber n) {
 		assert n != null : "Violation of: n is not null";
 		assert this.compareTo(n) >= 0 : "Violation of: this >= n";
-
-		// TODO - fill in body
+		
 		int thisLowDigit = this.divideBy10();
 		int nLowDigit = n.divideBy10();
 		if (!n.isZero()) {
@@ -81,6 +80,7 @@ public final class NaturalNumberInstanceOps extends NaturalNumber2 {
 		}
 		this.multiplyBy10(thisLowDigit);
 		n.multiplyBy10(nLowDigit);
+		
 
 	}
 
@@ -89,20 +89,22 @@ public final class NaturalNumberInstanceOps extends NaturalNumber2 {
 		assert p >= 0 : "Violation of: p >= 0";
 
 		// TODO - fill in body
-		NaturalNumber one = new NaturalNumber2(1); 
+		// 5^5
+		System.out.println("executed");
 		if (p > 0) {
-			NaturalNumber thisCopy = this.newInstance();
-			thisCopy.copyFrom(this);
-			this.power(p / 2);
-			NaturalNumber copyForSquare = this.newInstance();
-			copyForSquare.copyFrom(this); 
-			this.multiply(copyForSquare);
-			if (p % 2 == 1) {
+			NaturalNumber thisCopy = new NaturalNumber2(this);
+			this.power(p / 2); // 5^2 = 25 => 25*25 =>
+			NaturalNumber copyBySquare = new NaturalNumber2(this);
+			this.multiply(copyBySquare);
+			if (p % 2 != 0) {
 				this.multiply(thisCopy);
 			}
 		} else {
-			this.copyFrom(one);
+			this.copyFrom(new NaturalNumber2(1));
 		}
+	
+		
+		
 	}
 
 }

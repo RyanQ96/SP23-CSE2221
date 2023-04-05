@@ -1,4 +1,5 @@
 import components.naturalnumber.NaturalNumber;
+import components.naturalnumber.NaturalNumber2;
 import components.simplereader.SimpleReader;
 import components.simplereader.SimpleReader1L;
 import components.simplewriter.SimpleWriter;
@@ -51,31 +52,34 @@ public final class NaturalNumberTest {
     public static void main(String[] args) {
         SimpleReader in = new SimpleReader1L();
         SimpleWriter out = new SimpleWriter1L();
-
-        String command = getCommand(in, out);
-        while (!command.equals("q")) {
-            out.println();
-            if (command.equals("s")) {
-                out.print("Enter first natural number: ");
-                NaturalNumber n1 = new NaturalNumberInstanceOps(in.nextLine());
-                out.print("Enter second natural number: ");
-                NaturalNumber n2 = new NaturalNumberInstanceOps(in.nextLine());
-                out.println("Before subtract: n1 = " + n1 + ", n2 = " + n2);
-                n1.subtract(n2);
-                out.println("After subtract:  n1 = " + n1 + ", n2 = " + n2);
-            } else if (command.equals("p")) {
-                out.print("Enter a natural number: ");
-                NaturalNumber n = new NaturalNumberInstanceOps(in.nextLine());
-                out.print("Enter a non-negative integer: ");
-                int p = in.nextInteger();
-                out.println("Before power: n = " + n);
-                n.power(p);
-                out.println("After power:  n = " + n);
-            } else {
-                out.println(command);
-            }
-            command = getCommand(in, out);
-        }
+        
+        NaturalNumber num1 = new NaturalNumber2(2); 
+        num1.power(1000);
+        out.println(num1);
+//        String command = getCommand(in, out);
+//        while (!command.equals("q")) {
+//            out.println();
+//            if (command.equals("s")) {
+//                out.print("Enter first natural number: ");
+//                NaturalNumber n1 = new NaturalNumberInstanceOps(in.nextLine());
+//                out.print("Enter second natural number: ");
+//                NaturalNumber n2 = new NaturalNumberInstanceOps(in.nextLine());
+//                out.println("Before subtract: n1 = " + n1 + ", n2 = " + n2);
+//                n1.subtract(n2);
+//                out.println("After subtract:  n1 = " + n1 + ", n2 = " + n2);
+//            } else if (command.equals("p")) {
+//                out.print("Enter a natural number: ");
+//                NaturalNumber n = new NaturalNumberInstanceOps(in.nextLine());
+//                out.print("Enter a non-negative integer: ");
+//                int p = in.nextInteger();
+//                out.println("Before power: n = " + n);
+//                n.power(p);
+//                out.println("After power:  n = " + n);
+//            } else {
+//                out.println(command);
+//            }
+//            command = getCommand(in, out);
+//        }
 
         in.close();
         out.close();

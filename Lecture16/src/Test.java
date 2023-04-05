@@ -6,12 +6,16 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Car myCar = new CarType2("Rui");
-		System.out.println(myCar.getOwner());
-		myCar.owner = "123"; 
-//		System.out.println(myCar.owner);
-//		myCar.drive("123");
-		NaturalNumber num1 = new NaturalNumber2(new NaturalNumber2(2));
+//		Car myCar = new CarType2("Rui");
+//		System.out.println(myCar.getOwner());
+//		myCar.owner = "123"; 
+////		System.out.println(myCar.owner);
+////		myCar.drive("123");
+//		NaturalNumber num1 = new NaturalNumber2(new NaturalNumber2(2));
+		Car firstCar = new CarType1(); 
+		Car secondCar = new CarType2();
+		firstCar.accerate(); 
+		secondCar.accerate(); 
 	}
 
 }
